@@ -361,6 +361,7 @@ require('lazy').setup({
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
         ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
+        ['<leader>tt'] = { name = '[T]oggle [T]erminal', _ = 'which_key_ignore' },
         ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
       }
       -- visual mode
@@ -953,7 +954,7 @@ require('lazy').setup({
         },
       },
       config = function()
-        vim.keymap.set('n', '<leader>tT', ":let &bg=(&bg=='light'?'dark':'light')<CR>", { desc = '[t]oggle [T]heme' })
+        vim.keymap.set('n', '<leader>tT', ":let &bg=(&bg=='light'?'dark':'light')<CR>", { desc = '[T]oggle [T]heme' })
       end,
     },
   },
