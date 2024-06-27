@@ -186,7 +186,11 @@ vim.g.editorconfig = true
 -- [[ Custom filetypes ]]
 vim.filetype.add {
   extension = {
-    vto = 'vento',
+    -- HACK: vento treesitter keep crashing neovim
+    -- SOURCE: https://github.com/nvim-treesitter/nvim-treesitter/issues/2972
+    -- SOURCE: https://github.com/ikatyang/tree-sitter-markdown/issues/14
+    -- SOURCE: https://github.com/ventojs/tree-sitter-vento
+    vto = 'markdown',
   },
 }
 
@@ -1056,7 +1060,7 @@ require('lazy').setup({
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
-      auto_install = true,
+      auto_install = false,
       highlight = {
         enable = true,
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
