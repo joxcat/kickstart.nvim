@@ -1,6 +1,7 @@
 -- SOURCE: https://github.com/folke/twilight.nvim
 return {
   'folke/twilight.nvim',
+  enabled = false,
   config = function()
     local twilight = require 'twilight'
 
